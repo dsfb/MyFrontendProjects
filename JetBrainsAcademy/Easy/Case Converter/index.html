@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">Case Converter</div>
+    <label>
+        <textarea></textarea>
+    </label>
+    <br />
+    <button id="upper-case" onclick="convertUpperCase()">Upper Case</button>
+    <button id="lower-case" onclick="convertLowerCase()">Lower Case</button>
+    <button id="proper-case" onclick="convertProperCase()">Proper Case</button>
+    <button id="sentence-case" onclick="convertSentenceCase()">Sentence Case</button>
+    <button id="save-text-file" onclick="saveFile()">Save Text File</button>
+
+    <script>
+        function convertUpperCase() {
+            const textArea = document.querySelector("textarea");
+            textArea.value = textArea.value.toUpperCase();
+        }
+
+        function convertLowerCase() {
+            const textArea = document.querySelector("textarea");
+            textArea.value = textArea.value.toLowerCase();
+        }
+
+        function convertProperCase() {
+            const textArea = document.querySelector("textarea");
+            let text = textArea.value;
+            let tokens = text.split(" ");
+            let finalText = "";
+            tokens.forEach(token => finalText += token.charAt(0).toUpperCase() + token.slice(1).toLowerCase() + " ");
+            textArea.value = finalText.slice(0, finalText.length - 1);
+        }
+
+        function convertSentenceCase() {
+            const textArea = document.querySelector("textarea");
+            let text = textArea.value;
+            let tokens = text.split(" ");
+            let finalText = "";
+            let capitalize = true;
+            tokens.forEach(token => {
+                if (capitalize) {
+                    token = token.charAt(0).toUpperCase() + token.slice(1).toLowerCase();
+                    capitalize = false;
+                } else {
+                    if (token.endsWith(".")) {
+                        capitalize = true;
+                    }
+
+                    token = token.toLowerCase();
+                }
+                finalText += token + " ";
+            });
+            textArea.value = finalText.slice(0, finalText.length - 1);
+        }
+
+        function saveFile() {
+            let filename = "text.txt";
+            let text = document.querySelector("textarea").value;
+            let element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>
