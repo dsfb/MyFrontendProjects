@@ -1,0 +1,18 @@
+body {
+    background-color: #3b3b3b;
+    margin: 20px;
+}
+
+h1 {
+    color: azure;
+    font-size: 50px;
+    text-align: center;
+}
+
+.text_description {
+    color: bisque;
+}
+
+#outra_tag {
+    color: blueviolet;
+}
