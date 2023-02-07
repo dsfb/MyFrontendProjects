@@ -1,0 +1,25 @@
+
+Extra: Time de Front-End
+
+
+
+Transcrição
+
+[00:00] Vamos fazer aqui uma aula bônus com um vídeo rápido, só para falarmos como se comporta um time de front end hoje em dia.
+
+[00:07] As interfaces do front end estão cada vez com mais responsabilidade, são cada vez mais robustas, tem cada vez mais funções. E por isso o time foi crescendo muito.
+
+[00:19] É importante destacar que um time de front end, ou seja, um time para fazer uma interface não é composto só pelo desenvolvedor front end. Geralmente, temos alguém responsável pela usabilidade do site.
+
+[00:34] A usabilidade é responsável por responder como vai entregar aquelas informações, a forma.
+
+[00:42] Temos ainda o time da interface do usuário. O time do design, que vai pegar a forma como aquilo vai ser feito e vai dar o visual para aquilo.
+
+[00:55] Por último, temos o codificador, aquele desenvolvedor front end que vai pegar o design, a forma como o site foi apresentado com aquele visual e vai transformar em código para web, para um aplicativo ou para algum sistema.
+
+[01:14] Essas responsabilidades muitas vezes estão acumuladas em algumas pessoas, mas é importante pontuar cada uma delas. No nosso site, no nosso projeto, reparem que não paramos para discutir sobre qual cor iríamos escolher, ou qual imagem escolher. No nosso projeto, o designer já fez isso para nós.
+
+[01:36] Geralmente é assim que um desenvolvedor front end vai trabalhar. Ele vai receber os inputs e vai extrair daquilo o melhor código possível.
+
+[01:47] Espero que vocês consigam trabalhar assim e que consigam entregar o melhor código possível.
+
