@@ -1,0 +1,9 @@
+
+As lições finais deste curso são:
+
+1. Há ainda melhorias possíveis na página inicial para mobile, como alteração de espaçamentos, um respiro do texto em relação à borda da página, e assim por diante. Contudo, a página está funcional para mobile!
+2. Assim, fica como lições de casa, ou desafios, para você tornar as páginas de produtos e de contato, responsivas para mobile,
+ também!
+
+3. É muito importante que você pratique o conteúdo, ainda que seja para elaborar um site simples, um breve currículo que seja.
+
