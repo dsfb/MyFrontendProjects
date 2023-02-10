@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #191919;
+  min-height: 100vh;
+}
+
+input {
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; 
+  background-color: #cccccc;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+input[type=button] {
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  height: 80px;
+  width: 80px;
+}
+
+input[type=tel] {
+  background-color: #cccccc;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 22px;
+  height: 40px;
+  margin-bottom: 24px;
+  padding: 10px;
+  text-align: center;
+  width: 280px;
+}
