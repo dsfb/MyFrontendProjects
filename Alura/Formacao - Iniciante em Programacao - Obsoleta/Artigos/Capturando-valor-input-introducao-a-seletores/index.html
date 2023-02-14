@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: block;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+
+        .titulo-h2 {
+            margin-bottom: 16px;
+        }
+
+        #tabela-geral-alunos {
+            border-collapse: collapse;
+        }
+
+        .tabela-head tr th {
+            background-color: lightgrey;
+            border: 1px solid black;
+            padding: 16px;
+        }
+
+        #tabela-alunos tr td {
+            border: 1px solid black;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <h2 class="titulo-h2">Alunos</h2>
+            <table id="tabela-geral-alunos">
+                <thead class="tabela-head">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-alunos">
+                    <tr id="Paulo">
+                        <td class="info-nome">Paulo</td>
+                        <td class="info-endereço">Rua Sampaio Moreira</td>
+                        <td class="info-telefone">11-998877766</td>
+                    </tr>
+                    <tr id="Joao">
+                        <td class="info-nome">João</td>
+                        <td class="info-endereço">Avenida Paulista</td>
+                        <td class="info-telefone">11-998877665</td>
+                    </tr>
+                    <tr id="Erica">
+                        <td class="info-nome">Erica</td>
+                        <td class="info-endereço">Rua São Caetano</td>
+                        <td class="info-telefone">11-99-92-23-322</td>
+                    </tr>
+                    <tr id="Laura">
+                        <td class="info-nome">Erica</td>
+                        <td class="info-endereço">Rua São Caetano</td>
+                        <td class="info-telefone">11-99-92-23-322</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        console.log(document.querySelector("td"));
+        console.log('---------------------');
+        console.log(document.querySelectorAll("#Paulo"));
+        console.log('---------------------');
+        console.log(document.querySelectorAll(".info-telefone"));
+        console.log('---------------------');
+        const alunos = document.querySelectorAll(".info-telefone");
+
+        for (let indice = 0; indice < alunos.length; indice++) {
+            const novoTelefone = alunos[indice].textContent.replace('-', '');
+            alunos[indice].textContent = novoTelefone;
+        }
+        console.log('---------------------');
+        console.log(document.querySelectorAll(".info-telefone"));
+    </script>
+</body>
+</html>
