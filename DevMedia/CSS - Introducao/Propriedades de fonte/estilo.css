@@ -1,0 +1,11 @@
+h1 {
+	font-size: 48px;
+	font-family: 'Verdana';
+	text-decoration: underline;
+}
+
+p {
+	font-size: 28px;
+	font-weight: bold;
+	font-style: italic;
+}
