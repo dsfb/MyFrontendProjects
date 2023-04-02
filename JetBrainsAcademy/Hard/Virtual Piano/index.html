@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+
+        kbd {
+            display: inline-block;
+        }
+
+        .white-keys kbd {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: white;
+            width: 55px;
+            height: 150px;
+            margin-left: 1px;
+            padding-bottom: 30px;
+            border: 2px solid gray;
+            font-size: 18px;
+        }
+
+        .white-keys {
+            display: flex;
+        }
+
+        .black-keys {
+            display: flex;
+            position: absolute;
+            z-index: 2;
+            left: 9%;
+        }
+
+        #D-sharp-note {
+            margin-right: 76px;
+        }
+
+        .black-keys kbd {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 17px;
+            padding-bottom: 30px;
+            background-color: black;
+            width: 40px;
+            height: 75px;
+            border: 2px solid gray;
+            font-size: 18px;
+            color: white;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="black-keys">
+        <kbd>W</kbd>
+        <kbd id="D-sharp-note">E</kbd>
+        <kbd>T</kbd>
+        <kbd>Y</kbd>
+        <kbd>U</kbd>
+    </div>
+
+    <div class="white-keys">
+        <kbd>A</kbd>
+        <kbd>S</kbd>
+        <kbd>D</kbd>
+        <kbd>F</kbd>
+        <kbd>G</kbd>
+        <kbd>H</kbd>
+        <kbd>J</kbd>
+    </div>
+</div>
+</body>
+<script>
+    document.addEventListener("keydown", function(event) {
+        const keyArray = ['A', 'W', 'S', 'E',
+            'D', 'F', 'T', 'G',
+            'Y', 'H', 'U', 'J'];
+        const key = event.key.toUpperCase();
+        if ( keyArray.includes(key) ) {
+            const audioFilePath = key + ".mp3";
+            let audio = new Audio();
+            audio.src = audioFilePath;
+            audio.load();
+            audio.play();
+        }
+    });
+</script>
+</html>
